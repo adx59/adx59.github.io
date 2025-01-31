@@ -1,0 +1,3 @@
+# adamxu.org
+
+Static site

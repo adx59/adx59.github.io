@@ -1,1 +1,120 @@
-Hello world!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 20px auto;
+            position: relative;
+        }
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+            align-self: flex-start;
+        }
+        .text {
+            text-align: left;
+            flex: 1;
+        }
+        a {
+            color: #6a0dad; /* A pleasant shade of purple */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .eli-lilly-link {
+            color: red; /* Red color for Eli Lilly link */
+        }
+        .location {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #333;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-family: 'Lato', sans-serif;
+        }
+        .location::before {
+            content: "📍";
+            margin-right: 5px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            img {
+                margin-right: 0;
+                margin-bottom: 10px;
+                align-self: center;
+            }
+            .text {
+                text-align: center;
+            }
+            .location {
+                position: static;
+                margin-top: 10px;
+                font-size: 12px;
+                padding: 3px 7px;
+                border-radius: 8px;
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="face.jpg" alt="Profile Picture">
+        <div class="text">
+            <h1>Adam Xu</h1>
+            <p class="location">Providence, RI</p>
+            <p>I am a sophomore at Brown University studying Computational Biology.</p>
+            <p>
+                I am an undergraduate research assistant in the <a href="https://www.brown.edu/academics/neuroscience/" target="_blank">Department of Neuroscience</a> supervised by 
+                <a href="https://jaworskilab.com" target="_blank">Alex Jaworski</a>, where I study how spinal motor axons avoid inappropriate targets during neurodevelopment.
+                I conduct clinical research in ophthalmology under <a href="https://med.miami.edu/faculty/luis-e-vazquez-md-phd" target="_blank">Luis Vazquez</a> at the 
+                <a href="https://umiamihealth.org/en/bascom-palmer-eye-institute" target="_blank">Bascom Palmer Eye Institute</a>. 
+            </p>
+            <p>
+                I'm joining <a href="https://www.lilly.com/" target="_blank" class="eli-lilly-link">Eli Lilly</a> in NYC this summer to work on AAV-delivered gene therapies for neurodegenerative disease.
+            </p>
+            <p>
+                I am also Managing Director of <a href="https://www.brownmotionpictures.org/" target="_blank">Brown Motion Pictures</a>, a student organization at Brown that brings together 
+                student filmmakers to produce eight original short films a year.
+            </p>
+            <p>
+                You can contact me at <a href="mailto:adam_xu@brown.edu">adam_xu@brown.edu</a>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

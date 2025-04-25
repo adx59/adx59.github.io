@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  #banner {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #disciplines {
+    margin-top: 20px;
+  }
+  
+  #disciplines h2 {
+    text-align: center;
+  }
+  
+  #disciplines ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #disciplines ul li {
+    margin-bottom: 10px;
+  }
+  

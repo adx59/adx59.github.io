@@ -84,6 +84,10 @@ main {
     transition: opacity 0.8s ease-in-out;
 }
 
+.slide:nth-child(9) {
+    background-position: center 20%;
+}
+
 .slide::before {
     content: '';
     position: absolute;
@@ -110,6 +114,8 @@ main {
     max-width: 600px;
     padding: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    text-align: left;
 }
 
 .hero h1 {
@@ -119,6 +125,7 @@ main {
     letter-spacing: 0.5px;
     line-height: 1.2;
     color: var(--text-color);
+    text-align: left;
 }
 
 .hero h1 .university-name {
@@ -128,6 +135,7 @@ main {
     display: block;
     margin-bottom: 0.2rem;
     color: var(--text-color);
+    text-align: left;
 }
 
 .hero p {
@@ -135,6 +143,7 @@ main {
     color: var(--text-secondary);
     margin-bottom: 2rem;
     max-width: 80%;
+    text-align: left;
 }
 
 .cta-button {
@@ -233,7 +242,7 @@ main {
 
 .leadership-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -241,31 +250,15 @@ main {
 
 .leader-card {
     background-color: var(--secondary-color);
-    padding: 2rem;
+    padding: 2rem 0 2rem 0;
     border-radius: 10px;
-    transition: transform 0.3s ease;
     text-align: center;
-}
-
-.leader-card:hover {
-    transform: translateY(-5px);
-}
-
-.captains-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 1rem;
-}
-
-.captain {
-    text-align: center;
-}
-
-.captain .leader-image {
-    width: 180px;
-    height: 180px;
-    margin-bottom: 1rem;
+    max-width: 300px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
 .leader-image {
@@ -275,6 +268,43 @@ main {
     object-fit: cover;
     margin-bottom: 1rem;
     border: 3px solid var(--accent-color);
+}
+
+.belt-band {
+    display: block;
+    width: 100%;
+    margin: 1.2rem 0 0.1rem 0;
+    padding: 0.5rem 0;
+    border-radius: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    background: #222;
+}
+
+.belt-band.belt-black { background: #222; }
+.belt-band.belt-blue { background: #1976d2; }
+.belt-band.belt-purple { background: #8e24aa; }
+.belt-band.belt-white {
+    background: #fff;
+    color: #222;
+    border: 2px solid #222;
+}
+.belt-band.belt-red {
+    background: crimson;
+    color: #fff;
+}
+
+.leader-card h3 {
+    position: relative;
+    z-index: 3;
+}
+
+.leader-card .leader-role,
+.leader-card .class-year {
+    position: relative;
+    z-index: 3;
 }
 
 .leader-card h3 {
@@ -340,13 +370,16 @@ main {
     }
 
     .captains-grid {
-        grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
 
     .captain .leader-image {
         width: 150px;
         height: 150px;
+    }
+
+    .leader-card {
+        max-width: 100%;
     }
 }
 
@@ -360,7 +393,7 @@ main {
     }
 
     .captains-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 2rem;
     }
 
@@ -377,6 +410,27 @@ main {
 
     .leader-card {
         padding: 1.5rem;
+    }
+
+    .hero-content {
+        padding: 2rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero h1 .university-name {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .hero p {
+        max-width: 100%;
+        text-align: center;
     }
 }
 
@@ -470,26 +524,30 @@ main {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    justify-items: center;
-    width: fit-content;
+    padding: 0 1rem;
+}
+
+.eboard-section:nth-of-type(2) .eboard-grid {
+    gap: 1rem;
 }
 
 .member-card {
     background-color: var(--secondary-color);
+    padding: 2rem 0 2rem 0;
     border-radius: 10px;
-    padding: 1.5rem;
-    text-align: center;
     transition: transform 0.3s ease;
-    width: 200px;
-}
-
-.member-card:hover {
-    transform: translateY(-5px);
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
 .member-image {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
@@ -510,29 +568,50 @@ main {
 
 @media (max-width: 900px) {
     .eboard-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1.5rem;
     }
 
     .member-image {
-        width: 130px;
-        height: 130px;
+        width: 180px;
+        height: 180px;
     }
 }
 
 @media (max-width: 600px) {
-    .eboard-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 1rem;
+    .hero-content {
+        padding: 2rem;
     }
 
-    .member-image {
-        width: 120px;
-        height: 120px;
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h1 .university-name {
+        font-size: 1.4rem;
+    }
+
+    .eboard-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
     }
 
     .member-card {
         padding: 1rem;
+    }
+
+    .member-image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .member-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .member-role {
+        font-size: 0.9rem;
     }
 }
 
@@ -543,6 +622,8 @@ main {
     margin-top: 2rem;
     padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .website-credit a {
@@ -553,5 +634,33 @@ main {
 
 .website-credit a:hover {
     color: var(--text-color);
+}
+
+.captains-names-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.captain-name h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 900px) {
+    .captains-names-grid {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .captains-names-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
 }
   

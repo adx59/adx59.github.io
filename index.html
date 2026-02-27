@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam Xu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             background: linear-gradient(to right, #ECE9E6, #FFFFFF);
@@ -13,6 +15,7 @@
             display: flex;
             justify-content: center;
         }
+
         .container {
             width: 90%;
             max-width: 600px;
@@ -35,10 +38,12 @@
             margin-right: 20px;
             align-self: flex-start;
         }
+
         .text {
             text-align: left;
             flex: 1;
         }
+
         .pronouns {
             font-size: 14px;
             color: #666;
@@ -47,14 +52,19 @@
             margin-bottom: 15px;
             font-weight: 300;
         }
+
         a {
-            color: #6b21a8; /* More muted purple - less bright but still readable */
+            color: #6b21a8;
+            /* More muted purple - less bright but still readable */
             text-decoration: none;
-            font-weight: 600; /* Softer than bold, still emphasized */
+            font-weight: 600;
+            /* Softer than bold, still emphasized */
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .location {
             position: absolute;
             top: 20px;
@@ -70,24 +80,29 @@
             font-weight: bold;
             font-family: 'Lato', sans-serif;
         }
+
         .location::before {
             content: "📍";
             margin-right: 5px;
         }
+
         @media (max-width: 600px) {
             .container {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
+
             img {
                 margin-right: 0;
                 margin-bottom: 10px;
                 align-self: center;
             }
+
             .text {
                 text-align: center;
             }
+
             .location {
                 position: static;
                 margin-top: 10px;
@@ -96,38 +111,79 @@
                 border-radius: 8px;
                 display: inline-block;
             }
+
             .company-logo {
                 margin-bottom: 0;
             }
         }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: #444;
+            font-size: 24px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #6b21a8;
+            text-decoration: none;
+            transform: translateY(-3px);
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <img src="forweb.jpeg" alt="Profile Picture">
         <div class="text">
             <h1>Adam Xu</h1>
             <p class="pronouns">(he, him, his)</p>
-            <p class="location">Greater Boston Area</p>
-            <p>I am a junior at Brown University studying Computational Biology, with an emphasis on neurobiology, genetics, and data science.</p>
+            <p class="location">Cambridge, MA</p>
             <p>
-                Last summer, I developed assay platforms for gene therapy delivery and disease rescue at <a href="https://www.lilly.com/innovation/genetic-medicines" target="_blank">Lilly Gene Therapy</a> as a Research &amp; Development Intern in Boston.
-                <!-- This spring, I'm joining <a href="https://www.sanofi.com/en/our-science/rd-focus-areas/immunology-rd" target="_blank">Sanofi</a>'s Immunology & Inflammation cluster in Cambridge. -->
+                I'm a junior at Brown and a scientist-in-training focused on accelerating the development of therapies
+                for CNS and inflammatory disease. I aim to build scalable wet-lab and computational platforms that
+                generate decision-grade evidence for discovery and early development.
             </p>
             <p>
-                I am an undergraduate research assistant in the <a href="https://www.brown.edu/academics/neuroscience/" target="_blank">Department of Neuroscience</a> supervised by 
-                <a href="https://jaworskilab.com" target="_blank">Alex Jaworski</a>, where I study how spinal motor axons avoid inappropriate targets during neurodevelopment.
-                I lead clinical research in ophthalmology and glaucoma diagnostics under <a href="https://med.miami.edu/faculty/luis-e-vazquez-md-phd" target="_blank">Luis Vazquez</a> at the 
-                <a href="https://umiamihealth.org/en/bascom-palmer-eye-institute" target="_blank">Bascom Palmer Eye Institute</a>. 
+                This spring, I'm working on neuroimmunology at <a
+                    href="https://www.sanofi.com/en/our-science/rd-focus-areas/immunology-rd"
+                    target="_blank">Sanofi</a>'s Immunology &amp; Inflammation TA. Previously, I
+                developed assay platforms for gene therapy delivery and disease rescue at <a
+                    href="https://www.lilly.com/innovation/genetic-medicines" target="_blank">Lilly Gene Therapy</a>.
             </p>
             <p>
-                I am also Managing Director of <a href="https://www.brownmotionpictures.org/" target="_blank">Brown Motion Pictures</a>, a student organization at Brown that brings together 
+                At school, I am an undergraduate research assistant in the <a
+                    href="https://www.brown.edu/academics/neuroscience/" target="_blank">Department of Neuroscience</a>
+                supervised by
+                <a href="https://jaworskilab.com" target="_blank">Alex Jaworski</a>, where I study how spinal motor
+                axons avoid inappropriate targets during neurodevelopment.
+                I lead clinical research in ophthalmology and glaucoma diagnostics under <a
+                    href="https://med.miami.edu/faculty/luis-e-vazquez-md-phd" target="_blank">Luis Vazquez</a> at the
+                <a href="https://umiamihealth.org/en/bascom-palmer-eye-institute" target="_blank">Bascom Palmer Eye
+                    Institute</a>.
+            </p>
+            <p>
+                I am also Managing Director of <a href="https://www.brownmotionpictures.org/" target="_blank">Brown
+                    Motion Pictures</a>, a student organization at Brown that brings together
                 student filmmakers to produce eight original short films a year.
             </p>
             <p>
-                You can contact me at <a href="mailto:adam_xu@brown.edu">adam_xu@brown.edu</a>. Resume available upon request.
+                You can contact me at <a href="mailto:adam_xu@brown.edu">adam_xu@brown.edu</a>. Resume available upon
+                request.
             </p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/adamzxu" target="_blank" title="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://youtube.com/@adamxusci" target="_blank" title="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
